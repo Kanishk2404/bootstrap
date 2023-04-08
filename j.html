@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+        .media-player {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.media-player video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-player .controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.media-player .controls button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.media-player .controls .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.media-player .controls .progress-bar:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff0;
+  pointer-events: none;
+}
+
+.media-player .controls .volume {
+  font-size: 16px;
+}</style>
+
+    </head>
+<body>
+    <div class="media-player">
+  <video src="12.mkv"></video>
+  <div class="controls">
+    <button class="play-pause"></button>
+    <div class="progress-bar"></div>
+    <button class="volume"></button>
+    <button class="fullscreen"></button>
+  </div>
+</div>
+
+</body>
+</html>
